@@ -1,1 +1,3 @@
-angular.module('smartApp', []);
+angular.module('smartApp', [
+    'app-routes'
+]);

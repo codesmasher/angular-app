@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="es" ng-app="smartApp">
     <head>
+        <base href="/javascript/client/">
         <meta charset="UTF-8">
         <title>
             Smart-U Application
         </title>
         <!-- AngularJS -->
         <script src="app/lib/angular/angular.min.js"></script>
+        <script src="app/lib/angular-route/angular-route.min.js"></script>
     </head>
     <body>
-        <main></main>
+        <main ng-view></main>
         <!-- Angular application -->
         <script src="app/smart-app.js"></script>
+        <script src="app/routes.js"></script>
         <!-- Controllers -->
     </body>
 </html>
