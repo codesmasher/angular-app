@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html lang="es" ng-app="smartApp">
     <head>
+        <base href="/javascript/client/">
         <meta charset="UTF-8">
         <title>
             Smart-U Application
         </title>
         <!-- AngularJS -->
         <script src="app/lib/angular/angular.min.js"></script>
+        <script src="app/lib/angular-route/angular-route.min.js"></script>
     </head>
-    <body>
-        <main></main>
+    <body ng-controller="MainController as main">
+        <main ng-view></main>
+        <div>
+            <pre>$location.path() = {{main.$location.path()}}</pre>
+            <pre>$route.current.templateUrl = {{main.$route.current.templateUrl}}</pre>
+            <pre>$route.current.params = {{main.$route.current.params}}</pre>
+            <pre>$routeParams = {{main.$routeParams}}</pre>
+        </div>
         <!-- Angular application -->
         <script src="app/smart-app.js"></script>
-        <!-- Controllers -->
+        <script src="app/routes.js"></script>
+        <!-- Modules -->
+        <script src="app/modules/admin.js"></script>
     </body>
 </html>
